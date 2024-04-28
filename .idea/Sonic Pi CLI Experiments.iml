@@ -8,8 +8,20 @@
       <sourceFolder url="file://$MODULE_DIR$/features" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/sonic-pi/vendor/activesupport-7.0.6/lib/active_support/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="forwardable (v1.3.3, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.20.0, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="osc-ruby (v1.1.4, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="power_assert (v2.0.3, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="prime (v0.1.2, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="racc (v1.7.3, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v13.1.0, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.6.2, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.6, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubygems-update (v3.5.9, ruby-3.3.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test-unit (v3.6.1, ruby-3.3.0-p0) [gem]" level="application" />
   </component>
 </module>

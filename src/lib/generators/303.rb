@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 step_max = 32
 step_min = 16
 step_current = 0
