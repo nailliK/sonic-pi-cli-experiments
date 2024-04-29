@@ -1,4 +1,6 @@
-trap = [
+# frozen_string_literal: true
+
+set :drum_sequence_trap, [
   {
     name: "A",
     bd: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],

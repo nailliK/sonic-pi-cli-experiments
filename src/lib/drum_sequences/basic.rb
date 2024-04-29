@@ -1,4 +1,6 @@
-drum_sequence_basic = [
+# frozen_string_literal: true
+
+set :drum_sequence_basic, [
   {
     name: 'One and Seven',
     bd: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],

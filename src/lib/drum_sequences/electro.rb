@@ -1,4 +1,6 @@
-drum_sequence_electro = [
+# frozen_string_literal: true
+
+set :drum_sequence_electro, [
   {
     name: '1A',
     sn: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],

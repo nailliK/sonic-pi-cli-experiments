@@ -1,4 +1,6 @@
-drum_sequence_ = [
+# frozen_string_literal: true
+
+set :drum_sequence_rock_, [
   {
     name: "1",
     bd: [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0],

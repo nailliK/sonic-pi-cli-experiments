@@ -5,7 +5,9 @@ require '../sonic-pi'
 require './lib/globals'
 require './lib/functions'
 require './lib/clock'
-require './lib/drum_sequences/standard_breaks'
+require './lib/drum_sequences/hip_hop'
+require './lib/generators/drum'
+require './lib/generators/melody_brownian'
 # -- IGNORE_END
 
 # House global variables
@@ -18,31 +20,21 @@ eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/functions.rb'
 eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/clock.rb'
 
 ##### THE MAGIC HAPPENS BELOW #####
-eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/drum_sequences/standard_breaks.rb'
+
+# Grouping of drum patterns
+eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/drum_sequences/hip_hop.rb'
+# Drum sequence generation and live loop
 eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/generators/drum.rb'
 
-breaks = get :drum_sequence_standard_breaks
-patterns = [breaks[0], breaks[1], breaks[2]]
+# Brownian motion melody generation and live loop
+eval_file '~/Sites/Sonic Pi CLI Experiments/src/lib/generators/melody_brownian.rb'
 
-drum_sequence = calculate_pattern_stats patterns
+# Declare patterns and store analyzed patterns in global_drum_sequence in sequencer live loop
+patterns = get :drum_sequence_hip_hop
+set :global_drum_sequence, drum_calculate_pattern_stats(patterns)
 
-live_loop :drum_sequencer do
-  lpb = get :global_lines_per_beat
-  # gl = get :global_look
-  gs = get :global_start
+# Declare the melody sequence
+set :global_brownian_melody_sequence, melody_generate_brownian(8, 2)
 
-  if gs == 1
-    drum_sequence.each do |instrument|
-      puts instrument
-    end
-  end
-
-  sleep 1 / lpb
-
-end
-
-set :output, {
-  bd: { frequency: [3, 3, 1], total_positions: [3, 6, 3], avg_position: [1.0, 2.0, 3.0] },
-  sn: { frequency: [3, 3], total_positions: [3, 6], avg_position: [1.0, 2.0] },
-  ch: { frequency: [3, 3, 3, 3, 3, 3, 3, 3, 1], total_positions: [3, 6, 9, 12, 15, 18, 21, 24, 9], avg_position: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0] }
-}
+# start the clock
+set :global_start, 1

@@ -6,7 +6,7 @@ define :reseed do
   use_random_seed get(:global_seed)
 end
 
-define :midi_trigger do |channel, note|
-  midi note, port: port, channel: channel, sustain: 0.1
+define :midi_trigger do |note, channel, sustain = 0.1|
+  midi note, channel: channel, sustain: sustain
 end
 

@@ -1,4 +1,6 @@
-hip_hop = [
+# frozen_string_literal: true
+
+set :drum_sequence_hip_hop, [
   {
     name: '1A',
     bd: [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0],
